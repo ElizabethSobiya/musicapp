@@ -11,19 +11,19 @@ import { useNavigate } from "react-router-dom";
 export default function AddSongs() {
   
 
-  constructor(props);{
-    super(props);
-    this.state = {
-      songs_name: '',
-      songs_artist: '',
-      songs_release:'',
-      formErrors: {songs_name: '', songs_artist: '', songs_release},
-    songs_nameValid: false,
-    songs_artistValid: false,
-    songs_releaseValid:false,
-    formValid: false
-    }
-  };
+  // constructor(props);{
+  //   super(props);
+  //   this.state = {
+  //     songs_name: '',
+  //     songs_artist: '',
+  //     songs_release:'',
+  //   //   formErrors: {songs_name: '', songs_artist: '', songs_release},
+  //   // songs_nameValid: false,
+  //   // songs_artistValid: false,
+  //   // songs_releaseValid:false,
+  //   // formValid: false
+  //   }
+  // };
 
 
     const url = "https://above-jaybird-69.hasura.app/v1/graphql";
@@ -54,9 +54,6 @@ export default function AddSongs() {
              }
            }
          }`;
-
-         
-        
         e.preventDefault();
         fetch('https://above-jaybird-69.hasura.app/v1/graphql', {
          method: "POST",
@@ -64,20 +61,22 @@ export default function AddSongs() {
            "Content-Type": "application/json",
            "X-hasura-admin-secret": "hEl6BhgmXUU7fpmXAmcSmwxz6l8uxjmC6ZTOH2K1LTJYKQcgb62eZRH3VgoapVJK"},
            
-        //  body:{
+        //  body:JSON.stringify({
         //              songs_name:data.songs_name,
         //              songs_release: data.songs_release,
         //              songs_artist:data.songs_artist
-        //         },
-                // data:{
-                //   query,
-                //             variables:params,
-                //           },
+        //         }),
+        //         data:{
+        //           query:query,
+        //                     variables:params,
+        //                   },
          
         //  authorization: "Bearer <hEl6BhgmXUU7fpmXAmcSmwxz6l8uxjmC6ZTOH2K1LTJYKQcgb62eZRH3VgoapVJK>",
         
-          body: JSON.stringify({query,
-             variables:{params}
+          data: JSON.stringify({query: query,
+             variables:{
+               type: 'POST'
+             }
           })
        })
        .then(res => res.json())
@@ -89,10 +88,10 @@ export default function AddSongs() {
       newData [e.target.id] = e.target.value
       setData(newData)
       console.log(newData)
-      const name = e.target.name;
-  const value = e.target.value;
-  this.setState({[name]: value}, 
-    () => { this.validateField(name, value) });
+  //     const name = e.target.name;
+  // const value = e.target.value;
+  // this.setState({[name]: value}, 
+  //   () => { this.validateField(name, value) });
     }
 
   return (
@@ -106,19 +105,19 @@ export default function AddSongs() {
     <form action="" className='formData' onSubmit= {(e)=> submit(e)}>
         <label htmlFor="">Song Name: </label>
         <input type="text" id='songs_name' placeholder='song_name'
-        value={this.state.data.songs_name}
-         onChange={(e) => this.handle(e)}  />
+        value={data.songs_name}
+         onChange={(e) => handle(e)}  />
         <label htmlFor=""> Released Date: </label>
         <input type="number" id='songs_release' placeholder='release_date'
-       value={this.state.data.songs_release}
-       onChange={(e) => this.handle(e)}/>
+       value={data.songs_release}
+       onChange={(e) => handle(e)}/>
         <label htmlFor=""> Songs Images </label>
         <input type="file" />
         <label htmlFor=""> Artist </label>
         <select name="Artists"
         id='songs_artist'
-       value={this.state.data.songs_artist}
-        onChange={(e) => this.handle(e)} >
+       value={data.songs_artist}
+        onChange={(e) => handle(e)} >
                <option value="">Artists</option>
               <option >SP B</option>
              <option >K.J.Yesudas</option>
