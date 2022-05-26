@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+}
+
+
+.navContainer{
+    display: flex;
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+    background-color: green;
+    margin: 0;
+}
+
+.navContainer a{
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.navContainer a:hover{
+    color: black;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+form{
+   display: flex;
+   justify-content: space-between;
+   
+    
+
+}
+
+.inputbar{
+    border: none;
+    border-color: black;
+    margin-right: 2rem;
+}
+
+.navbutton{
+    border: none;
+    margin-left:2rem ;
+    padding: 0.5rem;
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+    background-color: green;
+    width: 100%;
+    margin: 0;
+    position: sticky;
+    
+}
+
+.btn{
+    background-color: black;
+}
+
+.maincontainer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    /* display: flex;
+    flex-wrap: nowrap;
+    /* justify-content: space-between; */
+    /* color: white;
+    width: calc(25% - 22px); */ 
+    
+
+}
+
+body{
+    background: #000000;
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: 1rem;
+    overflow-x: hidden;
+    color: white;
+}
+
+.container{
+    color: white;
+    width: calc(25% - 22px);
+    border: 2px solid green;
+    margin:15px 10px;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+    /* display: flex;
+    flex-wrap: nowrap; */
+    /* justify-content: space-between;
+    color: white;
+    width: calc(25% - 22px);
+    border: 2px solid green;
+    flex-wrap: nowrap;
+    margin:15px 10px;
+    color: white;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.3); */
+}
+
+.mainmusiccontainer{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+
+}
+.musiccontainer{
+    color: white;
+    width: calc(25% - 22px);
+    border: 2px solid green;
+    margin:15px 10px;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.3);
+}
+
+.img{
+    width: 100%;
+    height:25rem;
+}
+
+.songsbtn{
+    color:#000000;
+    background: #ffd700;
+    padding: 1rem;
+    float: right;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-right:1rem;
+    font-weight: bold;
+}
+
+h1{
+    margin-top: 7rem;
+    font-size: 2rem;
+}
+
+.formData{
+    color:green;
+    margin: auto;
+    display:block;
+    /* padding: 2rem;
+    display: flex;
+    flex-wrap: wrap; */
+}
+
+label{
+    display:block;
+    height: 3rem;
+    margin-top: 1rem;
+}
+
+.formDiv{
+    /* height: 100%; */
+    width: 100%;
+    display:block;
+    margin-left: 10rem;
+}
+.artistbtn{
+    color:#000000;
+    background: #ffd700;
+    padding: 1rem;
+    font-weight: bold;
+    margin-left: 2rem;
+
+}
+
+.formArtistData{
+    color:green;
+    margin: auto;
+    display:block;
+}
+
+.artistData{
+    margin-left: 10rem;
+    width: 100%;
+    display:block;
+}
+
+.btn{
+    color:#000000;
+    background: #ffd700;
+    padding: 1rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    margin-top: 5rem;
+}
+
+.message {
+    font-size: 1.2em;
+    text-align: center;
+    color: #36a936;
+  }
